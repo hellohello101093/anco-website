@@ -67,7 +67,7 @@
     <div class="header-inner">
         <!-- BEGIN LOGO -->
         <a class="navbar-brand" href="<?php echo base_url() ?>admin" style="margin-left: 30px;font-weight: bold;color: #FFF ">
-           Kathyda
+           An Co
         </a>
         <!-- END LOGO -->
         <!-- BEGIN RESPONSIVE MENU TOGGLER -->

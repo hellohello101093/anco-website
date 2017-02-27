@@ -19,36 +19,12 @@
 						</span>
     </a>
 </li>
-<li>
-    <a href="javascript:;">
-        <i class="fa fa-list"></i>
-						<span class="title">
-							Danh Mục
-						</span>
-						<span class="arrow ">
-						</span>
-    </a>
-    <ul class="sub-menu">
-        <li>
-            <a href="<?php echo base_url()?>admin/category/listall">
-                <i class="fa fa-tasks"></i>
-                Danh Sách Danh Mục
-            </a>
-        </li>
-        <li>
-            <a href="<?php echo base_url()?>admin/category/add">
-                <i class="fa fa-pencil"></i>
-                Thêm Danh Mục
-            </a>
-        </li>
-    </ul>
-</li>
 <!-- Product -->
 <li>
     <a href="javascript:;">
         <i class="fa fa-list"></i>
 						<span class="title">
-							Sản Phẩm
+							Dự Án Khách Hàng
 						</span>
 						<span class="arrow ">
 						</span>
@@ -57,38 +33,13 @@
         <li>
             <a href="<?php echo base_url()?>admin/product/listall">
                 <i class="fa fa-tasks"></i>
-                Danh Sách Sản Phẩm
+                Danh Sách Dự Án
             </a>
         </li>
         <li>
             <a href="<?php echo base_url()?>admin/product/add">
                 <i class="fa fa-pencil"></i>
-                Thêm Sản Phẩm
-            </a>
-        </li>
-    </ul>
-</li>
-<!-- Supplier-->
-<li>
-    <a href="javascript:;">
-        <i class="fa fa-list"></i>
-						<span class="title">
-							Đối Tác - Khách Hàng
-						</span>
-						<span class="arrow ">
-						</span>
-    </a>
-    <ul class="sub-menu">
-        <li>
-            <a href="<?php echo base_url()?>admin/footer_slider/listall">
-                <i class="fa fa-tasks"></i>
-                Danh Sách Đối Tác
-            </a>
-        </li>
-        <li>
-            <a href="<?php echo base_url()?>admin/footer_slider/add">
-                <i class="fa fa-pencil"></i>
-                Thêm Đối Tác
+                Thêm Dự Án
             </a>
         </li>
     </ul>
@@ -123,47 +74,48 @@
     <a href="javascript:;">
         <i class="fa fa-list"></i>
 						<span class="title">
-							Sự Kiện
+							Dịch Vụ
 						</span>
 						<span class="arrow ">
 						</span>
     </a>
     <ul class="sub-menu">
         <li>
-            <a href="<?php echo base_url()?>admin/events/listall">
+            <a href="<?php echo base_url()?>admin/service/listall">
                 <i class="fa fa-tasks"></i>
-                Danh Sách Sự Kiện
+                Danh Sách Dịch Vụ
             </a>
         </li>
         <li>
-            <a href="<?php echo base_url()?>admin/events/add">
+            <a href="<?php echo base_url()?>admin/service/add">
                 <i class="fa fa-pencil"></i>
-                Thêm Sự Kiện
+                Thêm Dịch Vụ
             </a>
         </li>
     </ul>
 </li>
 
+<!-- Supplier-->
 <li>
     <a href="javascript:;">
         <i class="fa fa-list"></i>
 						<span class="title">
-							Video
+							Đối Tác - Khách Hàng
 						</span>
 						<span class="arrow ">
 						</span>
     </a>
     <ul class="sub-menu">
         <li>
-            <a href="<?php echo base_url()?>admin/video/listall">
+            <a href="<?php echo base_url()?>admin/footer_slider/listall">
                 <i class="fa fa-tasks"></i>
-                Danh Sách Video
+                Danh Sách Đối Tác
             </a>
         </li>
         <li>
-            <a href="<?php echo base_url()?>admin/video/add">
+            <a href="<?php echo base_url()?>admin/footer_slider/add">
                 <i class="fa fa-pencil"></i>
-                Thêm Video
+                Thêm Đối Tác
             </a>
         </li>
     </ul>
@@ -203,12 +155,6 @@
             <a href="<?php echo base_url()?>admin/slider/listall">
                 <i class="fa fa-tasks"></i>
                 Slider PC
-            </a>
-        </li>
-        <li>
-            <a href="<?php echo base_url()?>admin/slider_mobile/listall">
-                <i class="fa fa-tasks"></i>
-                Slider Mobile - Tablet
             </a>
         </li>
     </ul>

@@ -48,7 +48,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <body class="login">
 <!-- BEGIN LOGO -->
 <div class="logo">
-   <h1 style="color: white ; margin-bottom: -10px;font-size: 50px">Kathyda Fashion</h1>
+   <h1 style="color: white ; margin-bottom: -10px;font-size: 50px">An Co</h1>
 </div>
 <!-- END LOGO -->
 <!-- BEGIN LOGIN -->
