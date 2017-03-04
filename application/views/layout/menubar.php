@@ -157,6 +157,36 @@
                 Slider PC
             </a>
         </li>
+        <li>
+            <a href="<?php echo base_url()?>admin/slider_gioithieu/listall">
+                <i class="fa fa-tasks"></i>
+                Slider Giới Thiệu
+            </a>
+        </li>
+        <li>
+            <a href="<?php echo base_url()?>admin/slider_dichvu/listall">
+                <i class="fa fa-tasks"></i>
+                Slider Dịch Vụ
+            </a>
+        </li>
+        <li>
+            <a href="<?php echo base_url()?>admin/slider_duan/listall">
+                <i class="fa fa-tasks"></i>
+                Slider Dự Án
+            </a>
+        </li>
+        <li>
+            <a href="<?php echo base_url()?>admin/slider_tintuc/listall">
+                <i class="fa fa-tasks"></i>
+                Slider Tin Tức
+            </a>
+        </li>
+        <li>
+            <a href="<?php echo base_url()?>admin/slider_lienhe/listall">
+                <i class="fa fa-tasks"></i>
+                Slider Liên Hệ
+            </a>
+        </li>
     </ul>
 </li>
 <!-- Contact -->

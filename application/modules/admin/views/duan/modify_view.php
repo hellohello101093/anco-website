@@ -64,7 +64,7 @@
                     </div>
                     <?php } ?>
                     <div class="form-group">
-                        <label class="col-md-2 control-label">Ảnh (323 x 215)</label>
+                        <label class="col-md-2 control-label">Ảnh (420 x 220)</label>
                         <div class="col-md-4">
                             <input type="file" name="avatar" id="news-avatar" title="Tải ảnh đại diện" />
                         </div>

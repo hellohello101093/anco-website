@@ -109,7 +109,7 @@ $autoload['language'] = array();
 |
 */
 
-$autoload['model'] = array('mconfig','mslider','mfooter_slider','mpage','mduan','mcontact','mcategory','muser');
+$autoload['model'] = array('mconfig','mslider','mfooter_slider','mpage','mduan','mcontact','mcategory','muser','mservice','mslider_gioithieu','mslider_lienhe','mslider_dichvu','mslider_duan','mslider_tintuc');
 
 
 /* End of file autoload.php */

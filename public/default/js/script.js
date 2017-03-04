@@ -20,36 +20,82 @@ function formatNumber(number)
     return x1 + x2;
 }
 
+function changeActiveTab(activeSlider) {
+    $('.list-project ul li').removeClass('active');
+    $('.title-project-slider ul li').removeClass('active');
+    numberSlider = $('.list-project ul li').length;
+    child = activeSlider % numberSlider;
+    if (child === 0) {
+        child = numberSlider;
+    }
+    $('.list-project ul li:nth-child('+ (child) +')').addClass('active');
+    $('.title-project-slider ul li:nth-child('+ (child) +')').addClass('active');
+}
+
+function runSlider() {
+    return setInterval(function() {
+        $('.jssora01r').trigger('click');
+    }, 4000)
+}
+
 $(document).ready(function(){
+    $('.tab-contact ul li').click(function(){
+        $('.tab-contact ul li').removeClass('active');
+        var name = $(this).data('class');
+        $('.box-contact-info').fadeOut();
+        $('.'+name).fadeIn();
+        $(this).addClass('active');
+    })
     $('.date-picker').datepicker();
     $('.time-picker').timepicker();
-    var numFeatured = $('.list-product-featured ul li').length;
-    $('.list-product-featured ul').owlCarousel({
-        loop:(numFeatured > 4),
+    var interVal = runSlider();
+    $('.button-prev').click(function() {
+        clearInterval(interVal);
+        $('.jssora01l').trigger('click');
+        interVal = runSlider()
+    })
+    $('.button-next').click(function() {
+        clearInterval(interVal);
+        $('.jssora01r').trigger('click');
+        interVal = runSlider()
+    })
+    var activeSlider = 1;
+    changeActiveTab(activeSlider);
+    $('.jssora01r').click(function(){
+        activeSlider++;
+        changeActiveTab(activeSlider);
+    })
+    $('.jssora01l').click(function(){
+        activeSlider--;
+        changeActiveTab(activeSlider);
+    })
+    var numFeatured = $('.list-news-index ul li').length;
+    $('.list-news-index ul').owlCarousel({
+        loop:(numFeatured > 3),
         nav:false,
         dots:false,
-        autoplay:(numFeatured > 4),
+        autoplay:(numFeatured > 3),
         autoplayTimeout:3000,
         smartSpeed:1000,
         margin: 15,
         autoplayHoverPause:true,
         responsive:{
             0:{
-                items:4
+                items:3
             },
             600:{
-                items:4
+                items:3
             },
             1000:{
-                items:4
+                items:3
             }
         },
     })
-    $('.button-prev-featured').click(function() {
-        $('.list-product-featured ul').trigger('prev');
+    $('.button-prev-news-index').click(function() {
+        $('.list-news-index ul').trigger('prev');
     });
-    $('.button-next-featured').click(function() {
-        $('.list-product-featured ul').trigger('next');
+    $('.button-next-news-index').click(function() {
+        $('.list-news-index ul').trigger('next');
     });
     
     
@@ -82,33 +128,60 @@ $(document).ready(function(){
         $('.list-product-bestSell ul').trigger('next');
     });
     
-    
     $('.doitac ul').owlCarousel({
-        loop: false,
+        loop: true,
         nav:false,
         dots:false,
         autoplay: true,
         autoplayTimeout:3000,
         smartSpeed:1000,
-        margin: 20,
+        margin: 15,
         autoplayHoverPause:true,
         responsive:{
             0:{
-                items:9
+                items:5
             },
             600:{
-                items:9
+                items:5
             },
             1000:{
-                items:9
+                items:5
             }
         },
     })
-    $('.pre').click(function() {
+    $('.button-prev-doitac-index').click(function() {
         $('.doitac ul').trigger('prev');
     })
-    $('.next').click(function() {
+    $('.button-next-doitac-index').click(function() {
         $('.doitac ul').trigger('next');
+    })
+    
+    $('.list-other ul').owlCarousel({
+        loop: true,
+        nav:false,
+        dots:false,
+        autoplay: true,
+        autoplayTimeout:3000,
+        smartSpeed:1000,
+        margin: 15,
+        autoplayHoverPause:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:1
+            }
+        },
+    })
+    $('.prev-duan-khac').click(function() {
+        $('.list-other ul').trigger('prev');
+    })
+    $('.next-duan-khac').click(function() {
+        $('.list-other ul').trigger('next');
     })
     
     
@@ -134,36 +207,14 @@ $(document).ready(function(){
         },
     })
     
-    $('.list-duan-khac ul').owlCarousel({
+    $('.image-list ul').owlCarousel({
         loop: false,
         nav:false,
-        dots:false,
+        dots:true,
         autoplay: true,
         autoplayTimeout:3000,
         smartSpeed:1000,
-        margin: 20,
-        autoplayHoverPause:true,
-        responsive:{
-            0:{
-                items:4
-            },
-            600:{
-                items:4
-            },
-            1000:{
-                items:4
-            }
-        },
-    })
-    
-    
-    $('.list-duan ul').owlCarousel({
-        loop: false,
-        nav:false,
-        dots:false,
-        autoplay: false,
-        autoplayTimeout:3000,
-        smartSpeed:1000,
+        margin: 10,
         autoplayHoverPause:true,
         responsive:{
             0:{
@@ -178,13 +229,7 @@ $(document).ready(function(){
         },
     })
     
-    $('.bt-duan-pre').click(function() {
-        $('.list-duan ul').trigger('prev');
-    })
-    $('.bt-duan-next').click(function() {
-        $('.list-duan ul').trigger('next');
-    })
-    
+       
     $('.list-sanpham ul li').hover(function(){
         $(this).find('.img-hover').toggleClass('none');
         $(this).find('.info-sanpham').toggleClass('none');
@@ -196,7 +241,7 @@ $(document).ready(function(){
         var value = $('#form-lienhe').serialize();
         var html = $(this).html();
         var content = $(this);
-        content.html('<div class="loading" style="font-size:13px; text-align:center; color:#454545"><img src="public/default/img/icon/loading.gif" alt="" /><div class="clr10"></div><span>Sending Information...</span></div>');
+        content.html('<div class="loading" style="font-size:13px; text-align:center; color:#454545"><img src="public/default/img/icon/loading.gif" alt="" /><div class="clr10"></div><span>Đang xử lý, vui lòng đợi...</span></div>');
         setTimeout(function(){
             $.post(base_url+'default/contact/send',value).done(function(data){
                 alertify.alert(data);

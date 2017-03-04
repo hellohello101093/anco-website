@@ -10,12 +10,6 @@ class Index extends MY_Controller{
         $this->_data['image_fb'] = base_url().'public/config/'.$this->mconfig->getByKey('image_fb');
         $this->_data['products'] = $this->mproduct->getNew();
         $this->_data['activeMenu'] ='home';
-        if($this->agent->mobile()){
-            $this->load->view('mobile/components/header',$this->_data);
-            $this->load->view('mobile/index');
-            $this->load->view('mobile/components/footer');
-            return;
-        }
         $this->load->view('components/header',$this->_data);
         $this->load->view('index',$this->_data);
         $this->load->view('components/footer');

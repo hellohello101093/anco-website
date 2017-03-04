@@ -4,17 +4,13 @@ class Contact extends MY_Controller{
         parent::__construct();
     }
     public function index(){
-        $this->_data['title'] = 'Contact - '.$this->mconfig->getByKey('page_title');
-        $this->_data['keyword'] = 'Contact - '.$this->mconfig->getByKey('page_keyword');
-        $this->_data['description'] = 'Contact - '.$this->mconfig->getByKey('page_description');
+        $this->_data['title'] = 'Liên hệ - '.$this->mconfig->getByKey('page_title');
+        $this->_data['keyword'] = 'Liên hệ - '.$this->mconfig->getByKey('page_keyword');
+        $this->_data['description'] = 'Liên hệ - '.$this->mconfig->getByKey('page_description');
         $this->_data['image_fb'] = base_url().'public/config/'.$this->mconfig->getByKey('image_fb');
-        $this->_data['activeMenu'] ='contact';
-        if($this->agent->mobile()){
-            $this->load->view('mobile/components/header',$this->_data);
-            $this->load->view('mobile/contact/index');
-            $this->load->view('mobile/components/footer');
-            return;
-        }
+        $this->_data['slider'] = $this->mslider_lienhe->listAll();
+        $this->_data['link_slider'] = 'slider_lienhe';
+        $this->_data['activeMenu'] ='lien-he';
         $this->load->view('components/header',$this->_data);
         $this->load->view('contact/index',$this->_data);
         $this->load->view('components/footer');
@@ -30,6 +26,6 @@ class Contact extends MY_Controller{
             'created'=>time()
         );
         $this->mcontact->add($arr);
-        echo 'Sending Success. Thank you so much and we will contact to you as soon as posiable!';
+        echo 'Liên hệ hoàn tất, chúng tôi sẽ liên hệ lại bạn trong thời gian ngắn nhất';
     }
  }
