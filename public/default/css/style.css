@@ -52,7 +52,7 @@ input,button,textarea,select{font-family: utm; color: #454545; cursor: pointer;}
 .ckeditor *{font-family: utm!important; font-size: 13px!important; line-height: 20px; text-align: justify; color: #666666!important;}
 .ckeditor img{max-width: 100%; margin: 10px auto;}
 
-.slider {position: relative; overflow: hidden;}
+.slider {position: relative; overflow: hidden; z-index: 1;}
 .slider .slider-bar {position: absolute; bottom: -5px; left:0; z-index: 999;}
 .slider .slider-bar img{width: 100%;}
 .slider .list-slider{position: relative; z-index: 999;}
@@ -60,14 +60,15 @@ input,button,textarea,select{font-family: utm; color: #454545; cursor: pointer;}
 .slider .button-slider{position: absolute; z-index: 99999; bottom: 11px; left: 0; right: 0; width: 134px; cursor: pointer; height: 44px;}
 .slider .button-slider .button-prev{float: left;}
 .slider .button-slider .button-next{float: right;}
-.menu {background: url('../img/icon/menu.png'); width: 100%; position: absolute; top: 10px; left:-14px; height: 95px; z-index: 9999; background-repeat: no-repeat;}
+.menu {background: url('../img/icon/menu.png'); width: 100%; position: absolute; top: 10px; left:-14px; height: 95px; z-index: 9999; background-repeat: no-repeat; z-index: 999999;}
 .logo{float: left; margin:20px 10px;}
-.menu nav{float: left; margin-left: 20px;}
-.menu nav ul li{float: left; min-height: 350px; line-height: 50px; text-transform: uppercase; font-size: 11px; margin-top: 10px; text-align: center; padding: 0 25px; position: relative;}
+.menu nav{float: left; margin-left: 20px; z-index: 999999; position: relative;}
+.menu nav ul li{float: left;min-height: 50px; line-height: 50px; text-transform: uppercase; font-size: 11px; margin-top: 10px; text-align: center; padding: 0 25px; position: relative; z-index: 999999;}
 .menu nav ul li:after{position: absolute; background: url('../img/icon/line.png'); content: " "; width: 21px; height: 30px; top: 9px; right: -10px}
 .menu nav ul li:last-child:after{display: none;}
 .menu nav ul li:hover a{color: #0b9444; border-bottom: 2px solid #ed3139;}
 .menu nav ul li:hover .sub-menu{display: block;}
+.menu nav ul li:hover{min-height: 350px;}
 .menu nav ul li.active a{color: #0b9444; border-bottom: 2px solid #ed3139;}
 .menu .global{float: left; margin: 20px 35px;}
 .hotline{ margin-top: -50px; z-index: 99999; position: relative;}
@@ -199,7 +200,7 @@ input,button,textarea,select{font-family: utm; color: #454545; cursor: pointer;}
 
 .chitiet-text{position: absolute; bottom: 23px; right: 70px; z-index: 9999; font-size: 12px;}
 
-.sub-menu{position: absolute; top: 60px; left: 0; width: 200px; text-align: left; line-height: 25px; text-decoration: none; text-transform: none; display: none;}
+.sub-menu{position: absolute; top: 60px; left: 0; width: 200px; text-align: left; line-height: 25px; text-decoration: none; text-transform: none; display: none; z-index: 999999;}
 .sub-menu a{border-bottom: none !important;}
 .item-sub-menu{height: 25px; background: #e0e0e0; padding: 0 10px; box-sizing: border-box; font-size: 13px; border-left: 2px solid #0b9444; border-bottom: 1px solid rgba(0,0,0,0.1); text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
 .item-sub-menu a{color: #0b9444!important;}
@@ -210,7 +211,7 @@ input,button,textarea,select{font-family: utm; color: #454545; cursor: pointer;}
 .language a{color: #454545;}
 .language a.active{font-weight: bold; color: #0b9444;}
 .language a:hover{font-weight: bold; color: #0b9444;}
-.language span{color: #4545;}
+.language span{color: #454545;}
 /* Home */
 
 @media only screen and (max-device-width: 1024px) {
