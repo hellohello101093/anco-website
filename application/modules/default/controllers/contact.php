@@ -7,7 +7,6 @@ class Contact extends MY_Controller{
         $this->_data['title'] = 'Liên hệ - '.$this->mconfig->getByKey('page_title');
         $this->_data['keyword'] = 'Liên hệ - '.$this->mconfig->getByKey('page_keyword');
         $this->_data['description'] = 'Liên hệ - '.$this->mconfig->getByKey('page_description');
-        $this->_data['image_fb'] = base_url().'public/config/'.$this->mconfig->getByKey('image_fb');
         $this->_data['slider'] = $this->mslider_lienhe->listAll();
         $this->_data['link_slider'] = 'slider_lienhe';
         $this->_data['activeMenu'] ='lien-he';

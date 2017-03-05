@@ -7,6 +7,7 @@ class mconfig extends CI_Model{
     }
     function getByType($type){
         $this->db->where('type',$type);
+        $this->db->order_by('id','asc');
         $query = $this->db->get('config');
         $result = $query->result();
         $arr = array();

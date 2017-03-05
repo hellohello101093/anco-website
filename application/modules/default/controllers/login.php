@@ -7,7 +7,6 @@ class Login extends MY_Controller{
         $this->_data['title'] = 'Sigin, Create Account - '.$this->mconfig->getByKey('page_title');
         $this->_data['keyword'] = 'Sigin, Create Account - '.$this->mconfig->getByKey('page_keyword');
         $this->_data['description'] = 'Sigin, Create Account - '.$this->mconfig->getByKey('page_description');
-        $this->_data['image_fb'] = base_url().'public/config/'.$this->mconfig->getByKey('image_fb');
         $this->_data['activeMenu'] ='home';
         if($this->agent->mobile()){
             $this->load->view('mobile/components/header',$this->_data);

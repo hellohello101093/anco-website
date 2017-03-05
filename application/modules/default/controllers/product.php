@@ -7,7 +7,6 @@ class Product extends MY_Controller{
         $this->_data['title'] = 'Dự án khách hàng - '.$this->mconfig->getByKey('page_title');
         $this->_data['keyword'] = 'Dự án khách hàng - '.$this->mconfig->getByKey('page_keyword');
         $this->_data['description'] = 'Dự án khách hàng - '.$this->mconfig->getByKey('page_description');
-        $this->_data['image_fb'] = base_url().'public/config/'.$this->mconfig->getByKey('image_fb');
         $this->_data['activeMenu'] ='du-an-khach-hang';
         $limit = 6;
         $this->_data['slider'] = $this->mslider_duan->listAll();
@@ -46,7 +45,6 @@ class Product extends MY_Controller{
         $this->_data['title'] = $this->_data['data']['name'].' - '.$this->mconfig->getByKey('page_title');
         $this->_data['keyword'] = $this->_data['data']['keyword'].' - '.$this->mconfig->getByKey('page_keyword');
         $this->_data['description'] = $this->_data['data']['info'].' - '.$this->mconfig->getByKey('page_description');
-        $this->_data['image_fb'] = base_url().'public/config/'.$this->mconfig->getByKey('image_fb');
         $this->_data['activeMenu'] ='du-an-khach-hang';
         $this->load->view('components/header',$this->_data);
         $this->load->view('product/detail',$this->_data);

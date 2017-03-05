@@ -7,7 +7,6 @@ class News extends MY_Controller{
         $this->_data['title'] = 'Tin tức - '.$this->mconfig->getByKey('page_title');
         $this->_data['keyword'] = 'Tin tức - '.$this->mconfig->getByKey('page_keyword');
         $this->_data['description'] = 'Tin tức - '.$this->mconfig->getByKey('page_description');
-        $this->_data['image_fb'] = base_url().'public/config/'.$this->mconfig->getByKey('image_fb');
         $this->_data['activeMenu'] ='tin-tuc';
         $this->_data['slider'] = $this->mslider_tintuc->listAll();
         $this->_data['link_slider'] = 'slider_tintuc';
@@ -47,7 +46,6 @@ class News extends MY_Controller{
         $this->_data['title'] = $this->_data['data']['title'].' - '.$this->mconfig->getByKey('page_title');
         $this->_data['keyword'] = $this->_data['data']['title'].' - '.$this->mconfig->getByKey('page_keyword');
         $this->_data['description'] = $this->_data['data']['title'].' - '.$this->mconfig->getByKey('page_description');
-        $this->_data['image_fb'] = base_url().'public/config/'.$this->mconfig->getByKey('image_fb');
         $this->load->view('components/header',$this->_data);
         $this->load->view('news/detail',$this->_data);
         $this->load->view('components/footer');

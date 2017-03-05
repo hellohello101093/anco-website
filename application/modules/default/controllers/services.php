@@ -7,7 +7,6 @@ class Services extends MY_Controller{
         $this->_data['title'] = 'Dịch vụ cung cấp - '.$this->mconfig->getByKey('page_title');
         $this->_data['keyword'] = 'Dịch vụ cung cấp - '.$this->mconfig->getByKey('page_keyword');
         $this->_data['description'] = 'Dịch vụ cung cấp - '.$this->mconfig->getByKey('page_description');
-        $this->_data['image_fb'] = base_url().'public/config/'.$this->mconfig->getByKey('image_fb');
         $this->_data['activeMenu'] ='dich-vu-cung-cap';
         $this->_data['slider'] = $this->mslider_dichvu->listAll();
         $this->_data['link_slider'] = 'slider_dichvu';
@@ -22,7 +21,6 @@ class Services extends MY_Controller{
         $this->_data['title'] = $this->_data['data']['title'].' - '.$this->mconfig->getByKey('page_title');
         $this->_data['keyword'] = $this->_data['data']['title'].' - '.$this->mconfig->getByKey('page_keyword');
         $this->_data['description'] = $this->_data['data']['title'].' - '.$this->mconfig->getByKey('page_description');
-        $this->_data['image_fb'] = base_url().'public/config/'.$this->mconfig->getByKey('image_fb');
         $this->_data['activeMenu'] ='dich-vu-cung-cap';
         $this->load->view('components/header',$this->_data);
         $this->load->view('services/detail',$this->_data);

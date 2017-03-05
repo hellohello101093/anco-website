@@ -247,12 +247,6 @@
                 Thông Tin
             </a>
         </li>
-        <li>
-            <a href="<?php echo base_url()?>admin/config/edit/bank">
-                <i class="fa fa-gear"></i>
-                Ngân Hàng
-            </a>
-        </li>
     </ul>
 </li>
 

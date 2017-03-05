@@ -10,7 +10,6 @@
 <meta property="og:title" content="<?php echo $title; ?>" />
 <meta property="og:url" content="<?php $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; echo $actual_link; ?>" />
 <meta property="og:description" content="<?php echo $description ?>" />
-<meta property="og:image" content="<?php echo $image_fb ?>" />
 <meta property="og:image:width" content="400" />
 <meta property="og:image:height" content="200" />
 <base href="<?php echo base_url(); ?>" />
@@ -65,11 +64,42 @@
                         <a href="gioi-thieu">
                             <span>Giới thiệu</span>
                         </a>
+                        <div class="sub-menu">
+                            <div class="item-sub-menu">
+                                <a href="ve-chung-toi">
+                                    <span>Về chúng tôi</span>
+                                </a>
+                            </div>
+                            <div class="item-sub-menu">
+                                <a href="so-do-to-chuc">
+                                    <span>Sơ đồ tổ chức</span>
+                                </a>
+                            </div>
+                            <div class="item-sub-menu">
+                                <a href="tam-nhin-su-menh">
+                                    <span>Tầm nhìn sứ mệnh</span>
+                                </a>
+                            </div>
+                            <div class="item-sub-menu">
+                                <a href="nganh-nghe-kinh-doanh">
+                                    <span>Ngành nghề kinh doanh</span>
+                                </a>
+                            </div>
+                        </div>
                     </li>
                     <li class="<?php if(isset($activeMenu) && $activeMenu === 'dich-vu-cung-cap') echo 'active'; ?>">
                         <a href="dich-vu-cung-cap">
                             <span>Dịch vụ cung cấp</span>
                         </a>
+                        <div class="sub-menu">
+                            <?php $services = $this->mservice->getAll(); foreach($services as $service){ ?>
+                            <div class="item-sub-menu">
+                                <a href="dich-vu-cung-cap/chi-tiet/<?php echo $service['link'] ?>">
+                                    <span><?php echo $service['title'] ?></span>
+                                </a>
+                            </div>
+                            <?php } ?>
+                        </div>
                     </li>
                     <li class="<?php if(isset($activeMenu) && $activeMenu === 'du-an-khach-hang') echo 'active'; ?>">
                         <a href="du-an-khach-hang">
@@ -88,8 +118,13 @@
                     </li>
                 </ul>
             </nav>
-            <div class="global">
+            <div class="global relative">
                 <img src="public/default/img/icon/global.png" alt=" " />
+                <div class="language">
+                    <a href="" class="active">VI</a>
+                    <span>|</span>
+                    <a href="#">EN</a>
+                </div>
             </div>
         </div>
         <div class="slider">

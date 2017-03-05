@@ -7,7 +7,6 @@ class events extends MY_Controller{
         $this->_data['title'] = 'Events - '.$this->mconfig->getByKey('page_title');
         $this->_data['keyword'] = 'Events - '.$this->mconfig->getByKey('page_keyword');
         $this->_data['description'] = 'Events - '.$this->mconfig->getByKey('page_description');
-        $this->_data['image_fb'] = base_url().'public/config/'.$this->mconfig->getByKey('image_fb');
         $this->_data['activeMenu'] ='entertaiment';
         $this->_data['data'] = $this->mevents->listAll(6,0);
         $numRow = $this->mevents->numRows();
@@ -28,7 +27,6 @@ class events extends MY_Controller{
         $this->_data['title'] = $this->_data['data']['title'].' - '.$this->mconfig->getByKey('page_title');
         $this->_data['keyword'] = $this->_data['data']['title'].' - '.$this->mconfig->getByKey('page_keyword');
         $this->_data['description'] = $this->_data['data']['title'].' - '.$this->mconfig->getByKey('page_description');
-        $this->_data['image_fb'] = base_url().'public/config/'.$this->mconfig->getByKey('image_fb');
         $this->_data['activeMenu'] ='entertaiment';
         if($this->agent->mobile()){
             $this->load->view('mobile/components/header',$this->_data);

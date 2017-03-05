@@ -7,7 +7,6 @@ class Category extends MY_Controller{
         $this->_data['title'] = 'Categories - '.$this->mconfig->getByKey('page_title');
         $this->_data['keyword'] = 'Categories - '.$this->mconfig->getByKey('page_keyword');
         $this->_data['description'] = 'Categories - '.$this->mconfig->getByKey('page_description');
-        $this->_data['image_fb'] = base_url().'public/config/'.$this->mconfig->getByKey('image_fb');
         $this->_data['activeMenu'] ='categories';
         $key = isset($_POST['key']) ? $_POST['key'] : '';
         $this->_data['key'] = $key;
@@ -29,7 +28,6 @@ class Category extends MY_Controller{
         $this->_data['title'] = $category['name'].' - '.$this->mconfig->getByKey('page_title');
         $this->_data['keyword'] = $category['name'].' - '.$this->mconfig->getByKey('page_keyword');
         $this->_data['description'] = $category['name'].' - '.$this->mconfig->getByKey('page_description');
-        $this->_data['image_fb'] = base_url().'public/config/'.$this->mconfig->getByKey('image_fb');
         $this->_data['activeMenu'] ='categories';
         $key = isset($_POST['key']) ? $_POST['key'] : '';
         $this->_data['key'] = $key;

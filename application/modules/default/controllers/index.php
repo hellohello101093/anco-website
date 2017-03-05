@@ -7,7 +7,6 @@ class Index extends MY_Controller{
         $this->_data['title'] = $this->mconfig->getByKey('page_title');
         $this->_data['keyword'] = $this->mconfig->getByKey('page_keyword');
         $this->_data['description'] = $this->mconfig->getByKey('page_description');
-        $this->_data['image_fb'] = base_url().'public/config/'.$this->mconfig->getByKey('image_fb');
         $this->_data['products'] = $this->mproduct->getNew();
         $this->_data['activeMenu'] ='home';
         $this->load->view('components/header',$this->_data);
