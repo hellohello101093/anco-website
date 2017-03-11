@@ -6,13 +6,13 @@
             </div>
             <div class="details">
                 <div class="number">
-                             <?php echo $count_product ?>
+                             <?php echo $count_service ?>
                 </div>
                 <div class="desc">
-                    Sản Phẩm
+                    Dịch Vụ
                 </div>
             </div>
-            <a class="more" href="<?php echo base_url() ?>admin/product/listall">
+            <a class="more" href="<?php echo base_url() ?>admin/service/listall">
                 Chi Tiết <i class="m-icon-swapright m-icon-white"></i>
             </a>
         </div>
@@ -24,14 +24,14 @@
             </div>
             <div class="details">
                 <div class="number">
-                    <?php echo $count_doitac ?>
+                    <?php echo $count_product ?>
 
                 </div>
                 <div class="desc">
-                    Đối Tác
+                    Dự Án
                 </div>
             </div>
-            <a class="more" href="<?php echo base_url() ?>admin/footer_slider/listall">
+            <a class="more" href="<?php echo base_url() ?>admin/product/listall">
                 Chi Tiết <i class="m-icon-swapright m-icon-white"></i>
             </a>
         </div>
@@ -43,13 +43,13 @@
             </div>
             <div class="details">
                 <div class="number">
-                    <?php echo $count_contact ?>
+                    <?php echo $count_footer_slider ?>
                 </div>
                 <div class="desc">
-                   Dự Án
+                   Đối Tác
                 </div>
             </div>
-            <a class="more" href="<?php echo base_url() ?>admin/contact/listall">
+            <a class="more" href="<?php echo base_url() ?>admin/footer_slider/listall">
                 Chi Tiết <i class="m-icon-swapright m-icon-white"></i>
             </a>
         </div>

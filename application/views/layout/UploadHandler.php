@@ -657,7 +657,7 @@ class UploadHandler
                 $src_func = 'imagecreatefrompng';
                 $write_func = 'imagepng';
                 $image_quality = isset($options['png_quality']) ?
-                    $options['png_quality'] : 27;
+                    $options['png_quality'] : 9;
                 break;
             default:
                 return false;
